@@ -1,0 +1,16 @@
+- Custom Item List - 
+Count =2
+-
+Type =Cover Crate
+Prefab =Crate_Sealed_01
+Chance =1
+Unique =FALSE
+Pickupable =FALSE
+SpawnType =2
+-
+Type =Building
+Prefab =Building_Viking_01
+Chance =1
+Unique =FALSE
+Pickupable =FALSE
+SpawnType =2
