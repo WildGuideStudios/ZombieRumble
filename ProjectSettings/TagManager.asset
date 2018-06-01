@@ -8,6 +8,7 @@ TagManager:
   - Wood (Static)
   - Dirt (Static)
   - Zombie
+  - SkyCamMenu
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Shootable
+  - Menu Layer
   - 
   - 
   - 
@@ -44,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Menu Layer
+    uniqueID: 3555751121
     locked: 0
