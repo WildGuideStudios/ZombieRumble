@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6B2E7946-57D7-86A9-3E1F-F0662178CFDE}</ProjectGuid>
+    <ProjectGuid>{2FC3422A-8237-A425-7EFD-53886C2F0979}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -97,9 +97,11 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-     <Compile Include="Assets\Scripts\CameraSwitchScript.cs" />
+     <Compile Include="Assets\Scripts\DamageController.cs" />
      <Compile Include="Assets\Scripts\GameOverManager.cs" />
+     <Compile Include="Assets\Scripts\HealthCounter.cs" />
      <Compile Include="Assets\Scripts\KillEnemy.cs" />
+     <Compile Include="Assets\Scripts\MenuTimeFix.cs" />
      <Compile Include="Assets\Scripts\OptionPathFollow.cs" />
      <Compile Include="Assets\Scripts\PathFollow.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
@@ -121,10 +123,10 @@
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
      <None Include="Assets\PDT Item Spawner\Documentation\README.txt" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Joe DESKTOP/Documents/GitHub/MNZR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>F:/Backups/Joe Wade/Projects/Unity Demo Game/Unity/Arrow and Shield/Arrow and Shield (1)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Joe DESKTOP/Documents/GitHub/MNZR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>F:/Backups/Joe Wade/Projects/Unity Demo Game/Unity/Arrow and Shield/Arrow and Shield (1)/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -360,7 +362,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{31423101-2504-684D-E0E1-F4038B4EB109}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{59C51DE2-29FB-3782-301F-C444886DF698}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

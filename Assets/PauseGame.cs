@@ -8,11 +8,13 @@ public class PauseGame : MonoBehaviour {
     public Transform hudCanvas;
     public Transform Player;
     public Transform MenuCamera;
+    public Transform ZombieSpawn;
+    public Transform ObjectSpawn;
 
 
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && Player.gameObject.activeInHierarchy == true)
         {
             Pause();
         }
@@ -29,11 +31,10 @@ public class PauseGame : MonoBehaviour {
             Player.GetComponent<FirstPersonController>().enabled = false;
         }
 
-        else if (MenuCamera.gameObject.activeInHierarchy == true)
+        else if (Player.gameObject.activeInHierarchy == false)
         {
             Menu();
         }
-
         else
         {
             canvas.gameObject.SetActive(false);
@@ -47,6 +48,9 @@ public class PauseGame : MonoBehaviour {
     public void Menu()
     {
         Time.timeScale = 1;
+        MenuCamera.gameObject.SetActive(true);
+        ZombieSpawn.gameObject.SetActive(false);
+        ObjectSpawn.gameObject.SetActive(false);
     }
     
 }
