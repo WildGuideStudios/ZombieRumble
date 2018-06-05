@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2FC3422A-8237-A425-7EFD-53886C2F0979}</ProjectGuid>
+    <ProjectGuid>{6B2E7946-57D7-86A9-3E1F-F0662178CFDE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -66,6 +66,14 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeByDistance.cs" />
+     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnKeyPress.cs" />
+     <Compile Include="Assets\EZ Camera Shake\Demo\Sample Scripts\ShakeOnTrigger.cs" />
+     <Compile Include="Assets\EZ Camera Shake\Demo\ShakeDemo.cs" />
+     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakeInstance.cs" />
+     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShakePresets.cs" />
+     <Compile Include="Assets\EZ Camera Shake\Scripts\CameraShaker.cs" />
+     <Compile Include="Assets\EZ Camera Shake\Scripts\Utilities\CameraUtilities.cs" />
      <Compile Include="Assets\Low Poly FPS Pack\Components\Demo Scene\Scripts\AimScript.cs" />
      <Compile Include="Assets\Low Poly FPS Pack\Components\Demo Scene\Scripts\DebrisScript.cs" />
      <Compile Include="Assets\Low Poly FPS Pack\Components\Demo Scene\Scripts\ExplosiveBarrelScript.cs" />
@@ -89,6 +97,51 @@
      <Compile Include="Assets\PDT Item Spawner\Scripts\CustomItemRespawn.cs" />
      <Compile Include="Assets\PDT Item Spawner\Scripts\CustomItemSpawner.cs" />
      <Compile Include="Assets\PDT Item Spawner\Scripts\CustomItemSpawnType.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\FogComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\GrainComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\BloomModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\FogModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\GrainModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\VignetteModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingContext.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingProfile.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -97,6 +150,7 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\Scripts\CameraSwitchScript.cs" />
      <Compile Include="Assets\Scripts\DamageController.cs" />
      <Compile Include="Assets\Scripts\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\HealthCounter.cs" />
@@ -113,20 +167,61 @@
      <Compile Include="Assets\Scripts\ZombieHealth.cs" />
      <Compile Include="Assets\Scripts\ZombieMovement.cs" />
      <Compile Include="Assets\Scripts\ZombieSpawner.cs" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
      <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
+     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
      <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksPolyWaterBlendFoam.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
      <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+     <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
      <None Include="Assets\Resources\PDTFiles\Saved Data\CustomItemList.txt" />
+     <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+     <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
      <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksMobDist.cginc" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
      <None Include="Assets\AxeyWorks\Low Poly v2\Shaders\AxeyWorksDistortion.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
      <None Include="Assets\PDT Item Spawner\Documentation\README.txt" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>F:/Backups/Joe Wade/Projects/Unity Demo Game/Unity/Arrow and Shield/Arrow and Shield (1)/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Joe DESKTOP/Documents/GitHub/MNZR/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>F:/Backups/Joe Wade/Projects/Unity Demo Game/Unity/Arrow and Shield/Arrow and Shield (1)/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Joe DESKTOP/Documents/GitHub/MNZR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -362,7 +457,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{59C51DE2-29FB-3782-301F-C444886DF698}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{31423101-2504-684D-E0E1-F4038B4EB109}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
