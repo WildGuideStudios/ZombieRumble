@@ -36,4 +36,4 @@ sysinfo.txt
 *.unitypackage
 
 # OSX Files
-.DS_Store
+*.DS_Store
