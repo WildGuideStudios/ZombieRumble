@@ -26436,7 +26436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb7edd2af8e1244cb7bf0032fce81d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnType: 2
+  spawnType: 0
   triggered: 0
   spawned: 0
 --- !u!65 &520650003
@@ -51964,7 +51964,6 @@ GameObject:
   - component: {fileID: 897019627}
   - component: {fileID: 897019626}
   - component: {fileID: 897019630}
-  - component: {fileID: 897019631}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Dirt (Static)
@@ -52053,26 +52052,6 @@ TerrainCollider:
   m_Enabled: 1
   m_TerrainData: {fileID: 0}
   m_EnableTreeColliders: 1
---- !u!114 &897019631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 897019625}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83577842690f2d74899ccd484e333fc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  health: {fileID: 0}
-  healthSlider: {fileID: 0}
-  damageImage: {fileID: 0}
-  deathClip: {fileID: 0}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  firstPersonController: {fileID: 0}
 --- !u!1 &903329820
 GameObject:
   m_ObjectHideFlags: 0
@@ -61686,7 +61665,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
