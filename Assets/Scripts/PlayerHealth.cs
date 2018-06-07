@@ -5,8 +5,11 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerHealth : MonoBehaviour
 {
+    
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
+    
+    public Text health;                                         // Reference to the UI's health amount.
     public Slider healthSlider;                                 // Reference to the UI's health bar.
     public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
     public AudioClip deathClip;                                 // The audio clip to play when the player dies.
@@ -20,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     bool damaged;                                               // True when the player gets damaged.
 
 
+
     void Awake()
     {
         // Setting up the references.
@@ -29,6 +33,14 @@ public class PlayerHealth : MonoBehaviour
 
         // Set the initial health of the player.
         currentHealth = startingHealth;
+
+
+        
+    }
+
+    void Start()
+    {
+        SetHealthText();
     }
 
 
@@ -60,8 +72,10 @@ public class PlayerHealth : MonoBehaviour
         // Reduce the current health by the damage amount.
         currentHealth -= amount;
 
+        SetHealthText();
+
         // Set the health bar's value to the current health.
-        healthSlider.value = currentHealth;
+        //healthSlider.value = currentHealth;
 
         // Play the hurt sound effect.
         //playerAudio.Play();
@@ -95,5 +109,10 @@ public class PlayerHealth : MonoBehaviour
         playerShooting.enabled = false;*/
         firstPersonController.enabled = false;
         
+    }
+
+    void SetHealthText()
+    {
+        health.text = "Health: " + currentHealth.ToString();
     }
 }
