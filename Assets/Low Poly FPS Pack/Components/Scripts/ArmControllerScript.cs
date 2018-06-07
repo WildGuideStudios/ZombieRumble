@@ -2,9 +2,12 @@
 using System.Collections;
 
 public class ArmControllerScript : MonoBehaviour {
-	
+
+    //public int damagePerShot;
+
 	Animator anim;
 	
+    
 	bool isReloading;
 	bool outOfAmmo;
 	
@@ -27,9 +30,12 @@ public class ArmControllerScript : MonoBehaviour {
 	
 	//Used for fire rate
 	float lastFired;
-	
-	//Ammo left
-	public int currentAmmo;
+
+    //Ammo left
+    public int currentAmmo;
+
+    //A layer mask for items that can be damaged
+    public LayerMask shootableMask = -9;
 
 	[System.Serializable]
 	public class meleeSettings
@@ -47,8 +53,12 @@ public class ArmControllerScript : MonoBehaviour {
 		[Header("Ammo")]
 		//Total ammo
 		public int ammo;
-		
-		[Header("Fire Rate & Bullet Settings")]
+
+        [Header("Damage Per Shot")]
+        //How much damage the shot does to an item with the tag "Shootable"
+        public int damagePerShot;
+
+        [Header("Fire Rate & Bullet Settings")]
 		public bool automaticFire;
 		public float fireRate;
 		
@@ -228,6 +238,9 @@ public class ArmControllerScript : MonoBehaviour {
 		
 		//Set the animator component
 		anim = GetComponent<Animator>();
+
+        //Creates the layer mask for shootable objects
+        shootableMask = LayerMask.GetMask("Shootable");
 		
 		//Set the ammo count
 		RefillAmmo ();
@@ -751,13 +764,27 @@ public class ArmControllerScript : MonoBehaviour {
 		if (Physics.Raycast (Spawnpoints.bulletSpawnPoint.transform.position, 
 		                     Spawnpoints.bulletSpawnPoint.transform.forward, out hit, ShootSettings.bulletDistance)) {
 			
-			//If a rigibody is hit, add bullet force to it
+			//If a shootable mask is hit, add damage to it.
 			if (hit.rigidbody != null)
 				hit.rigidbody.AddForce (ray.direction * ShootSettings.bulletForce);
-			
-			//********** USED IN THE DEMO SCENES **********
-			//If the raycast hit the tag "Target"
-			if (hit.transform.tag == "Target") {
+
+            if (Physics.Raycast (ray, shootableMask))
+            {
+                //Try and find a ZombieHealth Script
+                ZombieHealth zombieHealth = hit.collider.GetComponent<ZombieHealth>();
+
+                //If it exists...
+                if(zombieHealth != null)
+                {
+                    //Zombie Takes Damage Reflective to weapon settings
+                    zombieHealth.TakeDamage(ShootSettings.damagePerShot, hit.point);
+                }
+
+            }
+
+            //********** USED IN THE DEMO SCENES **********
+            //If the raycast hit the tag "Target"
+            if (hit.transform.tag == "Target") {
 				//Spawn bullet impact on surface
 				Instantiate (Prefabs.metalImpactPrefab, hit.point, 
 				             Quaternion.FromToRotation (Vector3.forward, hit.normal)); 

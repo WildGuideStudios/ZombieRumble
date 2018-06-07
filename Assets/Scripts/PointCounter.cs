@@ -4,16 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PointCounter : MonoBehaviour {
-    public Text zombiesKilled;
-    public Text killCount;
+    public Text score;
     public GUISkin guiSkin = null;
     public static int points = 0;
-
-    private void Start()
-    {
-        GameObject zombiesKilled = GameObject.Find("ZombiesKilled");
-        killCount = GetComponent<Text>();
-    }
 
     private void Update()
     {
@@ -27,9 +20,12 @@ public class PointCounter : MonoBehaviour {
         GUI.skin = null;
     }*/
 
-    void SetCountText()
+    
+
+    public void SetCountText()
     {
-        zombiesKilled.text = "Kills: " + points.ToString();
+
+        score.text = "Score: " + points.ToString();
     }
 
 }

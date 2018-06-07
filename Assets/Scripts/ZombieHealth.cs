@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ZombieHealth : MonoBehaviour
 {
+
+    
     public int startingHealth = 100;            // The amount of health the enemy starts the game with.
     public int currentHealth;                   // The current health the enemy has.
     public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
-    public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
+    public int scoreValue;                      // The amount added to the player's score when the enemy dies.
     public AudioClip deathClip;                 // The sound to play when the enemy dies.
 
 
@@ -25,6 +28,7 @@ public class ZombieHealth : MonoBehaviour
         // enemyAudio = GetComponent<AudioSource>();
         // hitParticles = GetComponentInChildren<ParticleSystem>();
         capsuleCollider = GetComponent<CapsuleCollider>();
+        
 
         // Setting the current health when the enemy first spawns.
         currentHealth = startingHealth;
@@ -32,6 +36,7 @@ public class ZombieHealth : MonoBehaviour
 
     void Update()
     {
+
         // If the enemy should be sinking...
         if (isSinking)
         {
@@ -65,6 +70,7 @@ public class ZombieHealth : MonoBehaviour
         {
             // ... the enemy is dead.
             Death();
+
         }
     }
 
@@ -83,6 +89,8 @@ public class ZombieHealth : MonoBehaviour
         // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
         // enemyAudio.clip = deathClip;
         // enemyAudio.Play();
+
+        //
 
         Debug.Log("Zombie Killed!");
     }
@@ -105,4 +113,5 @@ public class ZombieHealth : MonoBehaviour
         // After 2 seconds destory the enemy.
         Destroy(gameObject, 2f);
     }
+
 }
