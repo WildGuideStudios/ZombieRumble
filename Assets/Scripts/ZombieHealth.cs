@@ -92,7 +92,7 @@ public class ZombieHealth : MonoBehaviour
 
         //
 
-        Debug.Log("Zombie Killed!");
+        Debug.Log("Zombie is dead Killed!");
     }
 
 
