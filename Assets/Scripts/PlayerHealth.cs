@@ -108,7 +108,12 @@ public class PlayerHealth : MonoBehaviour
         /*playerMovement.enabled = false;
         playerShooting.enabled = false;*/
         firstPersonController.enabled = false;
-        
+
+        // If the player has zero or less health...
+        // ... tell the animator the player is dead.
+        //anim.SetTrigger("PlayerDead");
+        Debug.Log("You're dead.");
+
     }
 
     void SetHealthText()

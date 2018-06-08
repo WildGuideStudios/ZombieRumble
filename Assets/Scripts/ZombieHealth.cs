@@ -93,6 +93,9 @@ public class ZombieHealth : MonoBehaviour
         //
 
         Debug.Log("Zombie is dead Killed!");
+
+        // The enemy is dead.
+        isDead = true;
     }
 
 
