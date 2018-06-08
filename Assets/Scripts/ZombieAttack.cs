@@ -59,14 +59,6 @@ public class ZombieAttack : MonoBehaviour
             // ... attack.
             Attack();
         }
-
-        // If the player has zero or less health...
-        if (playerHealth.currentHealth <= 0)
-        {
-            // ... tell the animator the player is dead.
-            //anim.SetTrigger("PlayerDead");
-            Debug.Log("You're dead.");
-        }
     }
 
 
