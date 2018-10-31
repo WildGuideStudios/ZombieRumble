@@ -4,11 +4,30 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Target
-  - Wood (Static)
-  - Dirt (Static)
-  - Zombie
-  - SkyCamMenu
+  - Hotbar
+  - Slots
+  - Slot
+  - CraftSystem
+  - Canvas
+  - Item
+  - DraggingItem
+  - Panel
+  - ResultSlot
+  - ItemIcon
+  - Tooltip
+  - EventSystem
+  - EquipmentSystem
+  - MainInventory
+  - Timer
+  - Enemy
+  - SCAR
+  - CommonRifle
+  - UncommonRifle
+  - RareRifle
+  - UltraRareRifle
+  - OmegaRareRifle
+  - DeveloperRifle
+  - FinishLine
   layers:
   - Default
   - TransparentFX
@@ -18,10 +37,10 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
+  - Ground
   - Shootable
-  - Menu Layer
-  - 
+  - Gun
+  - PostProcessing
   - 
   - 
   - 
@@ -45,7 +64,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Menu Layer
-    uniqueID: 3555751121
     locked: 0

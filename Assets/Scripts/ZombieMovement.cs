@@ -8,6 +8,7 @@ public class ZombieMovement : MonoBehaviour
     PlayerHealth playerHealth;      // Reference to the player's health.
     ZombieHealth zombieHealth;        // Reference to this enemy's health.
     NavMeshAgent nav;               // Reference to the nav mesh agent.
+    Animator anim;                  // Reference to the animator
 
 
     void Awake()
@@ -17,6 +18,7 @@ public class ZombieMovement : MonoBehaviour
         playerHealth = player.GetComponent<PlayerHealth>();
         zombieHealth = GetComponent<ZombieHealth>();
         nav = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
     }
 
 
@@ -27,6 +29,7 @@ public class ZombieMovement : MonoBehaviour
         {
             // ... set the destination of the nav mesh agent to the player.
             nav.SetDestination(player.position);
+            anim.SetTrigger("Walk");
         }
         // Otherwise...
         else

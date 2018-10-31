@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: f57127cfcc32ab9419af130b6a9211fb
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: GroundExtents
     100002: //RootNode
@@ -92,6 +92,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

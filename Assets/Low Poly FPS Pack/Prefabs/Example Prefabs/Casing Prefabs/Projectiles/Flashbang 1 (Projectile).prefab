@@ -3,9 +3,9 @@
 --- !u!1 &141594
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 467012}
   - component: {fileID: 3379894}
@@ -25,7 +25,7 @@ GameObject:
 --- !u!4 &467012
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -38,7 +38,7 @@ Transform:
 --- !u!23 &2312486
 MeshRenderer:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141594}
   m_Enabled: 1
@@ -73,14 +73,14 @@ MeshRenderer:
 --- !u!33 &3379894
 MeshFilter:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141594}
   m_Mesh: {fileID: 4300000, guid: c58c1581c719abd4694c34986f1e3363, type: 3}
 --- !u!54 &5487288
 Rigidbody:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141594}
   serializedVersion: 2
@@ -95,7 +95,7 @@ Rigidbody:
 --- !u!65 &6517706
 BoxCollider:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141594}
   m_Material: {fileID: 13400000, guid: 98422cde6324dcf4c8ad2c756e0516c0, type: 2}
@@ -107,7 +107,7 @@ BoxCollider:
 --- !u!82 &8295002
 AudioSource:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141594}
   m_Enabled: 1
@@ -203,7 +203,7 @@ AudioSource:
 TrailRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141594}
   m_Enabled: 1
@@ -299,10 +299,11 @@ TrailRenderer:
     generateLightingData: 0
   m_MinVertexDistance: 0.15
   m_Autodestruct: 0
+  m_Emitting: 1
 --- !u!114 &11497702
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141594}
   m_Enabled: 1
@@ -343,6 +344,6 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141594}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1

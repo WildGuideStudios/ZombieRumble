@@ -1,16 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class PathFollow : MonoBehaviour
-{
+public class PathFollow : MonoBehaviour {
 
     public float speed = 3f;
     public Transform pathParent;
-    public Transform target;
     Transform targetPoint;
     int index;
 
-    void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Vector3 from;
         Vector3 to;
@@ -22,16 +21,15 @@ public class PathFollow : MonoBehaviour
             Gizmos.DrawLine(from, to);
         }
     }
-    void Start()
-    {
+    // Use this for initialization
+    void Start () {
         index = 0;
         targetPoint = pathParent.GetChild(index);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.LookAt(target);
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, speed * Time.deltaTime);
         if (Vector3.Distance(transform.position, targetPoint.position) < 0.1f)
         {
@@ -39,5 +37,5 @@ public class PathFollow : MonoBehaviour
             index %= pathParent.childCount;
             targetPoint = pathParent.GetChild(index);
         }
-    }
+	}
 }

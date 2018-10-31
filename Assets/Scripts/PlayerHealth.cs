@@ -6,6 +6,15 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class PlayerHealth : MonoBehaviour
 {
     
+    public Image healthFill;
+    public int startingSheild = 100;
+    public int currentShield;
+    public GameObject celebration;
+    public GameManager gameManager;
+    public GameObject gameOverCamera;
+
+    public Slider shieldSlider;
+
     public int startingHealth = 100;                            // The amount of health the player starts the game with.
     public int currentHealth;                                   // The current health the player has.
     
@@ -27,21 +36,32 @@ public class PlayerHealth : MonoBehaviour
     void Awake()
     {
         // Setting up the references.
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         //playerAudio = GetComponent<AudioSource>();
         //playerShooting = GetComponentInChildren<PlayerShooting>();
 
         // Set the initial health of the player.
         currentHealth = startingHealth;
+        currentShield = startingSheild;
 
+        SetHealthText();
 
-        
     }
 
-    void Start()
+    private void Start()
     {
+        StartCoroutine(WaitForGo());
+        currentHealth = startingHealth;
         SetHealthText();
     }
+
+    IEnumerator WaitForGo()
+    {
+        firstPersonController.enabled = false;
+        yield return new WaitForSeconds(5);
+        firstPersonController.enabled = true;
+    }
+
 
 
     void Update()
@@ -50,19 +70,34 @@ public class PlayerHealth : MonoBehaviour
         if (damaged)
         {
             // ... set the colour of the damageImage to the flash colour.
-            // damageImage.color = flashColour;
+            damageImage.color = flashColour;
         }
         // Otherwise...
         else
         {
             // ... transition the colour back to clear.
-            // damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
 
         // Reset the damaged flag.
         damaged = false;
     }
 
+    //Set up trigger events
+    void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log("Collision Detected" + collider.gameObject.tag);
+
+        if (collider.gameObject.tag == "FinishLine" /*&& PointCounter.enemies == 0*/) 
+        {
+            Debug.Log("Game Over Event Triggered!");
+            Time.timeScale = 0.5f;
+            celebration.SetActive(true);
+            gameOverCamera.SetActive(true);
+
+            //gameManager.GameOver();
+        }
+    }
 
     public void TakeDamage(int amount)
     {
@@ -75,7 +110,7 @@ public class PlayerHealth : MonoBehaviour
         SetHealthText();
 
         // Set the health bar's value to the current health.
-        //healthSlider.value = currentHealth;
+        healthSlider.value = currentHealth;
 
         // Play the hurt sound effect.
         //playerAudio.Play();
@@ -108,16 +143,11 @@ public class PlayerHealth : MonoBehaviour
         /*playerMovement.enabled = false;
         playerShooting.enabled = false;*/
         firstPersonController.enabled = false;
-
-        // If the player has zero or less health...
-        // ... tell the animator the player is dead.
-        //anim.SetTrigger("PlayerDead");
-        Debug.Log("You're dead.");
-
+        
     }
 
     void SetHealthText()
     {
-        health.text = "Health: " + currentHealth.ToString();
+       health.text = currentHealth.ToString() + "/" + startingHealth;
     }
 }
